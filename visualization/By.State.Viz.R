@@ -1,0 +1,5 @@
+library(plyr)
+x <- count(ufo_lm, "State")
+x <- as.data.frame(x)
+x <- subset(x, freq>200)
+write.csv(x, "datasets/CountsByState.csv")
